@@ -16,6 +16,148 @@
     </style>
   </head>
   <body class="font-kumbhsans">
-    <h1 class="font-bold">I am a boy</h1>
+    <nav
+      class="bg-White flex justify-between px-[1rem] py-[1rem] lg:px-[4.5rem] md:px-[2rem] md:py-[2rem]"
+    >
+      <div class="flex justify-center items-center gap-[1rem] md:hidden">
+        <button class="bg-transparent border-none cursor-pointer">
+          <img src="images/icon-menu.svg" alt="icon" />
+        </button>
+        <img src="images/logo.svg" alt="logo" />
+      </div>
+      <div class="hidden md:flex justify-center items-center gap-[1.5rem]">
+        <img src="images/logo.svg" alt="logo" class="mr-[1rem]" />
+        <a
+          href=""
+          class="text-Grayishblue font-semibold hover:text-Verydarkblue"
+          >Collections</a
+        >
+        <a
+          href=""
+          class="text-Grayishblue font-semibold hover:text-Verydarkblue"
+          >Men</a
+        >
+        <a
+          href=""
+          class="text-Grayishblue font-semibold hover:text-Verydarkblue"
+          >Women</a
+        >
+        <a
+          href=""
+          class="text-Grayishblue font-semibold hover:text-Verydarkblue"
+          >About</a
+        >
+        <a
+          href=""
+          class="text-Grayishblue font-semibold hover:text-Verydarkblue"
+          >Contact</a
+        >
+      </div>
+      <div class="flex items-center justify-center gap-[1rem]">
+        <button class="bg-transparent border-none cursor-pointer">
+          <img src="images/icon-cart.svg" alt="icon-cart" />
+        </button>
+        <img
+          src="images/image-avatar.png"
+          alt="image-avatar"
+          class="h-[3rem]"
+        />
+      </div>
+    </nav>
+    <hr
+      class="hidden md:block bg-Lightgrayishblue lg:mx-[4.5rem] md:mx-[2rem] opacity-[0.1]"
+    />
+    <main
+      class="flex flex-col mb-[3rem] md:mt-[5rem] md:mx-[1.5rem] lg:mx-[10rem] md:flex-row md:gap-[1rem]"
+    >
+      <div class="md:basis-[60%] lg:basis-[50%]">
+        <img
+          src="images/image-product-1.jpg"
+          alt="image-product-1"
+          class="md:hidden"
+        />
+        <img
+          src="images/image-product-1.jpg"
+          alt="image-product-1"
+          class="hidden md:block rounded-lg h-[23rem] w-fit"
+        />
+        <div class="hidden md:flex gap-2 mt-[2rem]">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="image-product-1-thumbnail"
+            class="rounded-[1rem] h-[6rem] overlay-thumbnail md:hover:opacity-[0.5]"
+          />
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="image-product-2-thumbnail"
+            class="rounded-[1rem] h-[6rem] md:hover:opacity-[0.5]"
+          />
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="image-product-3-thumbnail"
+            class="rounded-[1rem] h-[6rem] md:hover:opacity-[0.5]"
+          />
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="image-product-4-thumbnail"
+            class="rounded-[1rem] h-[6rem] md:hover:opacity-[0.5]"
+          />
+        </div>
+      </div>
+      <div class="mt-[1rem] mx-[1rem] space-y-4 md:basis-[40%] lg:basis-[50%]">
+        <p class="text-Darkgrayishblue font-bold text-[1.2rem]">
+          SNEAKER COMPANY
+        </p>
+        <h1 class="text-[2rem] text-Verydarkblue font-bold leading-[1.2]">
+          Fall Limited Edition Sneakers
+        </h1>
+        <p class="text-Grayishblue font-semibold leading-[1.7] text-[1.1rem]">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
+        </p>
+
+        <div
+          class="flex justify-between items-center md:flex-col md:items-start"
+        >
+          <div class="space-x-2.5 flex justify-center items-center">
+            <h1 class="text-[2rem] text-Verydarkblue font-bold">$125.00</h1>
+            <span
+              class="bg-Verydarkblue text-White py-1 px-3 rounded-sm font-bold"
+              >50%</span
+            >
+          </div>
+          <div class="flex items justify-center">
+            <p
+              class="text-Darkgrayishblue line-through text-[1.3rem] font-bold"
+            >
+              $250.00
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-[1rem]">
+          <div
+            class="flex justify-between items-center bg-Lightgrayishblue rounded-md px-[1.5rem] py-[0.8rem] md:basis-[40%]"
+          >
+            <button class="bg-transparent border-none md:hover:opacity-[0.5]">
+              <img src="images/icon-minus.svg" alt="icon-minus" />
+            </button>
+            <span class="text-Verydarkblue font-bold text-[1.5rem]">0</span>
+            <button class="bg-transparent border-none md:hover:opacity-[0.5]">
+              <img src="images/icon-plus.svg" alt="icon" />
+            </button>
+          </div>
+          <div class="md:basis-[60%]">
+            <button
+              class="bg-Orange w-[100%] py-[1rem] text-Verydarkblue font-bold flex gap-[1rem] rounded-md justify-center items-center md:hover:opacity-[0.5]"
+            >
+              <img src="images/icon-cart.svg" alt="icon" />
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

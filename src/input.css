@@ -10,3 +10,8 @@
   --color-Lightgrayishblue: hsl(223, 64%, 98%);
   --color-White: hsl(0, 0%, 100%);
 }
+.overlay-thumbnail {
+  background: hsl(0, 0%, 0%);
+  opacity: 0.5;
+  border: 4px solid hsl(26, 100%, 55%);
+}
