@@ -173,8 +173,20 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
   .mx-\[1rem\] {
     margin-inline: 1rem;
+  }
+  .my-\[2rem\] {
+    margin-block: 2rem;
   }
   .mt-\[1rem\] {
     margin-top: 1rem;
@@ -194,8 +206,8 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
+  .h-\[1rem\] {
+    height: 1rem;
   }
   .h-\[3rem\] {
     height: 3rem;
@@ -206,8 +218,14 @@
   .h-\[23rem\] {
     height: 23rem;
   }
-  .w-\[45rem\] {
-    width: 45rem;
+  .h-\[100vh\] {
+    height: 100vh;
+  }
+  .w-\[1rem\] {
+    width: 1rem;
+  }
+  .w-\[70\%\] {
+    width: 70%;
   }
   .w-\[100\%\] {
     width: 100%;
@@ -215,17 +233,8 @@
   .w-fit {
     width: fit-content;
   }
-  .basis-\[40\%\] {
-    flex-basis: 40%;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -242,9 +251,6 @@
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
-  .gap-3 {
-    gap: calc(var(--spacing) * 3);
-  }
   .gap-\[1\.5rem\] {
     gap: 1.5rem;
   }
@@ -258,11 +264,11 @@
       margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
-  .space-x-2 {
+  .space-y-5 {
     :where(& > :not(:last-child)) {
-      --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 2) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-x-reverse)));
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .space-x-2\.5 {
@@ -275,6 +281,9 @@
   .rounded-\[1rem\] {
     border-radius: 1rem;
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
@@ -283,10 +292,6 @@
   }
   .rounded-sm {
     border-radius: var(--radius-sm);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .border-none {
     --tw-border-style: none;
@@ -374,15 +379,23 @@
   .line-through {
     text-decoration-line: line-through;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .opacity-\[0\.1\] {
     opacity: 0.1;
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+  .hover\:border-2 {
+    &:hover {
+      @media (hover: hover) {
+        border-style: var(--tw-border-style);
+        border-width: 2px;
+      }
+    }
+  }
+  .hover\:border-Orange {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-Orange);
+      }
+    }
   }
   .hover\:text-Verydarkblue {
     &:hover {
@@ -391,28 +404,9 @@
       }
     }
   }
-  .hover\:opacity-\[0\.5\] {
-    &:hover {
-      @media (hover: hover) {
-        opacity: 0.5;
-      }
-    }
-  }
-  .hover\:opacity-\[0\.7\] {
-    &:hover {
-      @media (hover: hover) {
-        opacity: 0.7;
-      }
-    }
-  }
   .md\:mx-\[1\.5rem\] {
     @media (width >= 48rem) {
       margin-inline: 1.5rem;
-    }
-  }
-  .md\:mx-\[2\.5rem\] {
-    @media (width >= 48rem) {
-      margin-inline: 2.5rem;
     }
   }
   .md\:mx-\[2rem\] {
@@ -470,16 +464,6 @@
       gap: 1rem;
     }
   }
-  .md\:gap-\[3rem\] {
-    @media (width >= 48rem) {
-      gap: 3rem;
-    }
-  }
-  .md\:gap-\[4rem\] {
-    @media (width >= 48rem) {
-      gap: 4rem;
-    }
-  }
   .md\:px-\[2rem\] {
     @media (width >= 48rem) {
       padding-inline: 2rem;
@@ -504,49 +488,14 @@
       margin-inline: 4.5rem;
     }
   }
-  .lg\:mx-\[5rem\] {
-    @media (width >= 64rem) {
-      margin-inline: 5rem;
-    }
-  }
-  .lg\:mx-\[7rem\] {
-    @media (width >= 64rem) {
-      margin-inline: 7rem;
-    }
-  }
   .lg\:mx-\[10rem\] {
     @media (width >= 64rem) {
       margin-inline: 10rem;
     }
   }
-  .lg\:basis-0 {
-    @media (width >= 64rem) {
-      flex-basis: calc(var(--spacing) * 0);
-    }
-  }
-  .lg\:basis-\[6\\0\%\] {
-    @media (width >= 64rem) {
-      flex-basis: 6\0%;
-    }
-  }
-  .lg\:basis-\[40\%\] {
-    @media (width >= 64rem) {
-      flex-basis: 40%;
-    }
-  }
   .lg\:basis-\[50\%\] {
     @media (width >= 64rem) {
       flex-basis: 50%;
-    }
-  }
-  .lg\:basis-\[60\%\] {
-    @media (width >= 64rem) {
-      flex-basis: 60%;
-    }
-  }
-  .lg\:basis-auto {
-    @media (width >= 64rem) {
-      flex-basis: auto;
     }
   }
   .lg\:px-\[4\.5rem\] {
@@ -560,6 +509,14 @@
   opacity: 0.5;
   border: 4px solid hsl(26, 100%, 55%);
 }
+.mobile-nav {
+  transform: translateX(-20rem);
+  transition: all ease-in-out 1s;
+}
+.open-nav {
+  transform: translateX(0rem);
+  transition: all ease-in-out 1s;
+}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
@@ -570,11 +527,6 @@
   inherits: false;
   initial-value: 0;
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -583,7 +535,7 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
+@property --tw-border-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -593,10 +545,9 @@
     *, ::before, ::after, ::backdrop {
       --tw-space-y-reverse: 0;
       --tw-space-x-reverse: 0;
-      --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
+      --tw-border-style: solid;
     }
   }
 }
