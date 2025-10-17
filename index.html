@@ -25,6 +25,8 @@
         </button>
         <img src="images/logo.svg" alt="logo" />
       </div>
+
+      <!-- MOBILE NAV -->
       <div
         class="bg-White text-Verydarkblue text-[1.1rem] h-[100vh] w-[70%] space-y-5 flex flex-col px-[1rem] absolute top-0 left-0 md:hidden mobile-nav"
       >
@@ -42,6 +44,8 @@
         <a href="" class="font-semibold">About</a>
         <a href="" class="font-semibold">Contact</a>
       </div>
+
+      <!-- DESKTOP NAV -->
       <div class="hidden md:flex justify-center items-center gap-[1.5rem]">
         <img src="images/logo.svg" alt="logo" class="mr-[1rem]" />
         <a
@@ -70,10 +74,30 @@
           >Contact</a
         >
       </div>
+
       <div class="flex items-center justify-center gap-[1rem]">
-        <button class="bg-transparent border-none cursor-pointer">
+        <button class="bg-transparent border-none cursor-pointer cart-btn">
           <img src="images/icon-cart.svg" alt="icon-cart" />
         </button>
+
+        <!-- Cart -->
+        <div
+          class="absolute top-[5.3rem] left-2 bg-White rounded-lg py-[1.5rem] w-[95%] shadow-2xl cart hidden"
+        >
+          <h1
+            class="text-[1.3rem] text-Verydarkblue mb-[1.5rem] mx-[1rem] font-bold"
+          >
+            Cart
+          </h1>
+          <hr class="bg-Lightgrayishblue opacity-[0.1]" />
+
+          <div class="flex justify-center items-center my-[4.5rem]">
+            <caption>
+              <p class="font-bold text-Grayishblue">Your cart is empty.</p>
+            </caption>
+          </div>
+        </div>
+
         <img
           src="images/image-avatar.png"
           alt="image-avatar"

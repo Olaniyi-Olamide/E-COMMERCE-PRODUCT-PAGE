@@ -1,5 +1,5 @@
 "use strict";
-
+const body = document.querySelector("body");
 const openBtn = document.querySelector(".open-btn");
 const closeBtn = document.querySelector(".close-btn");
 const mobileNav = document.querySelector(".mobile-nav");

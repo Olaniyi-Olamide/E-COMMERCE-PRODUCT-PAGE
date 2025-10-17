@@ -22,4 +22,5 @@
 .open-nav {
   transform: translateX(0rem);
   transition: all ease-in-out 1s;
+  opacity: 1;
 }
