@@ -24,3 +24,6 @@
   transition: all ease-in-out 1s;
   opacity: 1;
 }
+.opencart {
+  display: block;
+}
