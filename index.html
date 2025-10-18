@@ -82,7 +82,7 @@
 
         <!-- Cart -->
         <div
-          class="absolute top-[5.3rem] left-2 bg-White rounded-lg py-[1.5rem] w-[95%] shadow-2xl cart hidden md:left-[22rem] md:w-[50%] md:top-[8rem] lg:w-[35%] lg:left-[50rem]"
+          class="absolute top-[5.3rem] left-2 bg-White rounded-lg py-[1.5rem] w-[95%] shadow-2xl cart md:left-[22rem] md:w-[50%] md:top-[8rem] lg:w-[30%] lg:left-[50rem] hidden"
         >
           <h1
             class="text-[1.3rem] text-Verydarkblue mb-[1.5rem] mx-[1rem] font-bold"
@@ -91,9 +91,41 @@
           </h1>
           <hr class="bg-Lightgrayishblue opacity-[0.1]" />
 
-          <div class="flex justify-center items-center my-[4.5rem]">
+          <div class="flex my-[1rem] mx-[1rem] justify-center">
             <caption>
               <p class="font-bold text-Grayishblue">Your cart is empty.</p>
+              <div class="flex flex-col gap-[1.5rem] hidden">
+                <div class="flex justify-between items-center gap-[1rem]">
+                  <img
+                    src="images/image-product-1-thumbnail.jpg"
+                    alt="image-product-1-thumbnail"
+                    class="h-[4rem] rounded-md"
+                  />
+                  <div class="flex flex-col">
+                    <p class="text-Grayishblue text-[1rem]">
+                      Fall Limited Edition Sneakers
+                    </p>
+                    <p class="text-Grayishblue">
+                      $125.00 x 3
+                      <span class="text-Verydarkblue font-bold text-[1.2rem]"
+                        >$375.00</span
+                      >
+                    </p>
+                  </div>
+                  <button class="border-none bg-transparent">
+                    <img
+                      src="images/icon-delete.svg"
+                      alt="icon-delete"
+                      class="h-[1.35rem]"
+                    />
+                  </button>
+                </div>
+                <button
+                  class="bg-Orange text-Verydarkblue font-bold w-[100%] py-[1rem] rounded-lg"
+                >
+                  Checkout
+                </button>
+              </div>
             </caption>
           </div>
         </div>
@@ -181,11 +213,17 @@
           <div
             class="flex justify-between items-center bg-Lightgrayishblue rounded-md px-[1.5rem] py-[0.8rem] md:basis-[40%]"
           >
-            <button class="bg-transparent border-none md:hover:opacity-[0.5]">
+            <button
+              class="bg-transparent border-none md:hover:opacity-[0.5] minus-btn"
+            >
               <img src="images/icon-minus.svg" alt="icon-minus" />
             </button>
-            <span class="text-Verydarkblue font-bold text-[1.5rem]">0</span>
-            <button class="bg-transparent border-none md:hover:opacity-[0.5]">
+            <span class="text-Verydarkblue font-bold text-[1.5rem] no-of-orders"
+              >0</span
+            >
+            <button
+              class="bg-transparent border-none md:hover:opacity-[0.5] plus-btn"
+            >
               <img src="images/icon-plus.svg" alt="icon" />
             </button>
           </div>
