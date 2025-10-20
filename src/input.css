@@ -18,15 +18,30 @@
 .mobile-nav {
   transform: translateX(-20rem);
   transition: all ease-in-out 1s;
+  z-index: 1;
 }
 .open-nav {
   transform: translateX(0rem);
   transition: all ease-in-out 1s;
-  opacity: 1;
 }
 .opencart {
   display: block;
 }
 button {
   cursor: pointer;
+}
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem 1.2rem;
+}
+.slide {
+  display: none;
+}
+.active {
+  display: block;
 }

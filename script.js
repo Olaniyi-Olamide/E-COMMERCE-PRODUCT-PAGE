@@ -16,8 +16,29 @@ const amountOrdered = document.querySelector(".amount-ordered");
 const totalPrice = document.querySelector(".total-price");
 const checkoutBtn = document.querySelector(".checkoutBtn");
 const deleteCartBtn = document.querySelector(".delete-cart-btn");
+const slides = document.querySelectorAll(".slide");
+const nextBtn = document.querySelector(".next-btn");
+const prevBtn = document.querySelector(".prev-btn");
 
 let orders = 0;
+let current = 0;
+
+const showSlide = function (index) {
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+    slides[index].classList.add("active");
+  });
+};
+
+nextBtn.addEventListener("click", function () {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+});
+prevBtn.addEventListener("click", function () {
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
+});
+
 openBtn.addEventListener("click", function () {
   mobileNav.classList.add("open-nav");
 });
@@ -44,6 +65,7 @@ addToCart.addEventListener("click", function () {
   if (orders === 0) {
     emptyCartMsg.classList.remove("hidden");
     cartOrder.classList.add("hidden");
+    ordersNum.classList.add("hidden");
   }
   if (orders >= 1) {
     emptyCartMsg.classList.add("hidden");
