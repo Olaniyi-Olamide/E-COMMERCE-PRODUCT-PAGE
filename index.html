@@ -77,6 +77,10 @@
 
       <div class="flex items-center justify-center gap-[1rem]">
         <button class="bg-transparent border-none cursor-pointer cart-btn">
+          <span
+            class="bg-Orange text-White text-[0.8rem] relative top-[0.6rem] px-2 rounded-lg left-[0.5rem] orders-num hidden"
+            >0</span
+          >
           <img src="images/icon-cart.svg" alt="icon-cart" />
         </button>
 
@@ -93,8 +97,10 @@
 
           <div class="flex my-[1rem] mx-[1rem] justify-center">
             <caption>
-              <p class="font-bold text-Grayishblue">Your cart is empty.</p>
-              <div class="flex flex-col gap-[1.5rem] hidden">
+              <p class="font-bold text-Grayishblue empty-cart-msg">
+                Your cart is empty.
+              </p>
+              <div class="flex flex-col gap-[1.5rem] hidden cart-order">
                 <div class="flex justify-between items-center gap-[1rem]">
                   <img
                     src="images/image-product-1-thumbnail.jpg"
@@ -105,14 +111,17 @@
                     <p class="text-Grayishblue text-[1rem]">
                       Fall Limited Edition Sneakers
                     </p>
-                    <p class="text-Grayishblue">
-                      $125.00 x 3
-                      <span class="text-Verydarkblue font-bold text-[1.2rem]"
+                    <div class="flex flex-row gap-[1rem] items-center">
+                      <span class="text-Grayishblue amount-ordered">
+                        $125.00 x 3
+                      </span>
+                      <span
+                        class="text-Verydarkblue font-bold text-[1.2rem] total-price"
                         >$375.00</span
                       >
-                    </p>
+                    </div>
                   </div>
-                  <button class="border-none bg-transparent">
+                  <button class="border-none bg-transparent delete-cart-btn">
                     <img
                       src="images/icon-delete.svg"
                       alt="icon-delete"
@@ -121,7 +130,7 @@
                   </button>
                 </div>
                 <button
-                  class="bg-Orange text-Verydarkblue font-bold w-[100%] py-[1rem] rounded-lg"
+                  class="bg-Orange text-Verydarkblue font-bold w-[100%] py-[1rem] rounded-lg checkoutBtn"
                 >
                   Checkout
                 </button>
@@ -218,7 +227,7 @@
             >
               <img src="images/icon-minus.svg" alt="icon-minus" />
             </button>
-            <span class="text-Verydarkblue font-bold text-[1.5rem] no-of-orders"
+            <span class="text-Verydarkblue font-bold text-[1.5rem] orders-count"
               >0</span
             >
             <button
@@ -229,7 +238,7 @@
           </div>
           <div class="md:basis-[60%]">
             <button
-              class="bg-Orange w-[100%] py-[1rem] text-Verydarkblue font-bold flex gap-[1rem] rounded-md justify-center items-center md:hover:opacity-[0.5]"
+              class="bg-Orange w-[100%] py-[1rem] text-Verydarkblue font-bold flex gap-[1rem] rounded-md justify-center items-center md:hover:opacity-[0.5] add-to-cart-btn"
             >
               <img src="images/icon-cart.svg" alt="icon" />
               Add to cart
