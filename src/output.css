@@ -187,41 +187,17 @@
   .top-\[0\.6rem\] {
     top: 0.6rem;
   }
-  .top-\[1rem\] {
-    top: 1rem;
-  }
   .top-\[3rem\] {
     top: 3rem;
   }
   .top-\[5\.3rem\] {
     top: 5.3rem;
   }
-  .top-\[5rem\] {
-    top: 5rem;
-  }
-  .top-\[6\.5rem\] {
-    top: 6.5rem;
-  }
-  .top-\[6\.8rem\] {
-    top: 6.8rem;
-  }
-  .top-\[6rem\] {
-    top: 6rem;
-  }
-  .top-\[8rem\] {
-    top: 8rem;
-  }
-  .top-\[10rem\] {
-    top: 10rem;
-  }
   .right-\[-0\.2rem\] {
     right: -0.2rem;
   }
   .right-\[0\.5rem\] {
     right: 0.5rem;
-  }
-  .right-\[1rem\] {
-    right: 1rem;
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
@@ -234,9 +210,6 @@
   }
   .left-\[0\.5rem\] {
     left: 0.5rem;
-  }
-  .left-\[1rem\] {
-    left: 1rem;
   }
   .left-\[24rem\] {
     left: 24rem;
@@ -277,15 +250,6 @@
   .hidden {
     display: none;
   }
-  .h-\[0\.2rem\] {
-    height: 0.2rem;
-  }
-  .h-\[0\.3rem\] {
-    height: 0.3rem;
-  }
-  .h-\[0\.5rem\] {
-    height: 0.5rem;
-  }
   .h-\[1\.5rem\] {
     height: 1.5rem;
   }
@@ -304,9 +268,6 @@
   .h-\[5rem\] {
     height: 5rem;
   }
-  .h-\[6rem\] {
-    height: 6rem;
-  }
   .h-\[23rem\] {
     height: 23rem;
   }
@@ -321,21 +282,6 @@
   }
   .w-\[1rem\] {
     width: 1rem;
-  }
-  .w-\[2\.5rem\] {
-    width: 2.5rem;
-  }
-  .w-\[2rem\] {
-    width: 2rem;
-  }
-  .w-\[3\.5rem\] {
-    width: 3.5rem;
-  }
-  .w-\[3rem\] {
-    width: 3rem;
-  }
-  .w-\[4rem\] {
-    width: 4rem;
   }
   .w-\[25rem\] {
     width: 25rem;
@@ -381,9 +327,6 @@
   }
   .gap-\[1rem\] {
     gap: 1rem;
-  }
-  .gap-\[2rem\] {
-    gap: 2rem;
   }
   .space-y-4 {
     :where(& > :not(:last-child)) {
@@ -535,34 +478,10 @@
       position: absolute;
     }
   }
-  .after\:bottom-0 {
-    &::after {
-      content: var(--tw-content);
-      bottom: calc(var(--spacing) * 0);
-    }
-  }
   .after\:bottom-\[-2\.8rem\] {
     &::after {
       content: var(--tw-content);
       bottom: -2.8rem;
-    }
-  }
-  .after\:bottom-\[-2rem\] {
-    &::after {
-      content: var(--tw-content);
-      bottom: -2rem;
-    }
-  }
-  .after\:bottom-\[-5rem\] {
-    &::after {
-      content: var(--tw-content);
-      bottom: -5rem;
-    }
-  }
-  .after\:bottom-\[5rem\] {
-    &::after {
-      content: var(--tw-content);
-      bottom: 5rem;
     }
   }
   .after\:left-0 {
@@ -811,10 +730,7 @@ button {
   border-radius: 50%;
   padding: 1rem 1.2rem;
 }
-.slide {
-  display: none;
-}
-.slide-desktop {
+.slide, .main-slide, .slide-desktop {
   display: none;
 }
 .active {

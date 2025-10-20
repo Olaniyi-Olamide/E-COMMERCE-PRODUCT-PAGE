@@ -50,12 +50,12 @@ button {
   border-radius: 50%;
   padding: 1rem 1.2rem;
 }
-.slide {
-  display: none;
-}
+.slide,
+.main-slide,
 .slide-desktop {
   display: none;
 }
+
 .active {
   display: block;
 }
