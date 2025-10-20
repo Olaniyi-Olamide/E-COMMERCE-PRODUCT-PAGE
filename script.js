@@ -29,21 +29,15 @@ cartBtn.addEventListener("click", function () {
 });
 
 minusBtn.addEventListener("click", function () {
-  if (!orders) {
-    ordersNum.classList.add("hidden");
-  }
+  if (!orders) return;
 
-  if (orders > 0) {
-    orders = orders - 1;
-    ordersCount.innerHTML = orders;
-    ordersNum.innerHTML = orders;
-  }
+  orders = orders - 1;
+  ordersCount.innerHTML = orders;
 });
+
 plusBtn.addEventListener("click", function () {
-  ordersNum.classList.remove("hidden");
   orders = orders + 1;
   ordersCount.innerHTML = orders;
-  ordersNum.innerHTML = orders;
 });
 
 addToCart.addEventListener("click", function () {
@@ -54,6 +48,8 @@ addToCart.addEventListener("click", function () {
   if (orders >= 1) {
     emptyCartMsg.classList.add("hidden");
     cartOrder.classList.remove("hidden");
+    ordersNum.innerHTML = orders;
+    ordersNum.classList.remove("hidden");
   }
   amountOrdered.innerHTML = `$125.00 x ${orders}`;
   totalPrice.innerHTML = `$${125 * orders}.00`;
