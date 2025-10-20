@@ -15,6 +15,17 @@
   opacity: 0.5;
   border: 4px solid hsl(26, 100%, 55%);
 }
+.thumbnail {
+  cursor: pointer;
+}
+.overlay {
+  background: hsl(0, 0%, 0%);
+  opacity: 0.75;
+  width: 100%;
+  height: 50rem;
+  position: absolute;
+  top: 0;
+}
 .mobile-nav {
   transform: translateX(-20rem);
   transition: all ease-in-out 1s;
@@ -40,6 +51,9 @@ button {
   padding: 1rem 1.2rem;
 }
 .slide {
+  display: none;
+}
+.slide-desktop {
   display: none;
 }
 .active {

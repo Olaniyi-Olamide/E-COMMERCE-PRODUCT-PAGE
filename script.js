@@ -1,5 +1,7 @@
 "use strict";
-const body = document.querySelector("body");
+
+// ELEMENTS
+
 const openBtn = document.querySelector(".open-btn");
 const closeBtn = document.querySelector(".close-btn");
 const mobileNav = document.querySelector(".mobile-nav");
@@ -17,11 +19,20 @@ const totalPrice = document.querySelector(".total-price");
 const checkoutBtn = document.querySelector(".checkoutBtn");
 const deleteCartBtn = document.querySelector(".delete-cart-btn");
 const slides = document.querySelectorAll(".slide");
+const slidesDesktop = document.querySelectorAll(".slide-desktop");
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
+const nextBtnDesktop = document.querySelector(".next-btn-desktop");
+const prevBtnDesktop = document.querySelector(".prev-btn-desktop");
+const closeBtnDesktop = document.querySelector(".close-btn-desktop");
+const overlay = document.querySelector(".overlay");
+const desktopSlider = document.querySelector(".desktop-slider");
+const thumbnails = document.querySelectorAll(".thumbnail");
+const mainThumbnail = document.querySelector(".main-thumbnail");
 
 let orders = 0;
 let current = 0;
+let currentDesktop = 0;
 
 const showSlide = function (index) {
   slides.forEach((slide) => {
@@ -29,14 +40,42 @@ const showSlide = function (index) {
     slides[index].classList.add("active");
   });
 };
+const showSlideDesktop = function (index) {
+  slidesDesktop.forEach((slide) => {
+    slide.classList.remove("active");
+    slidesDesktop[index].classList.add("active");
+  });
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.classList.remove("overlay-thumbnail");
+    thumbnails[index].classList.add("overlay-thumbnail");
+  });
+};
+
+thumbnails.forEach((thumbnail, index) => {
+  thumbnail.addEventListener("click", function () {
+    showSlideDesktop(index);
+  });
+});
 
 nextBtn.addEventListener("click", function () {
   current = (current + 1) % slides.length;
   showSlide(current);
 });
+
 prevBtn.addEventListener("click", function () {
   current = (current - 1 + slides.length) % slides.length;
   showSlide(current);
+});
+
+nextBtnDesktop.addEventListener("click", function () {
+  currentDesktop = (currentDesktop + 1) % slidesDesktop.length;
+  showSlideDesktop(currentDesktop);
+});
+
+prevBtnDesktop.addEventListener("click", function () {
+  currentDesktop =
+    (currentDesktop - 1 + slidesDesktop.length) % slidesDesktop.length;
+  showSlideDesktop(currentDesktop);
 });
 
 openBtn.addEventListener("click", function () {
@@ -99,3 +138,12 @@ checkoutBtn.addEventListener("click", function () {
     emptyCartMsg.innerHTML = "Your cart is empty";
   }, 2000);
 });
+
+const toggleDesktopSlider = function () {
+  desktopSlider.classList.toggle("hidden");
+  overlay.classList.toggle("hidden");
+};
+
+closeBtnDesktop.addEventListener("click", toggleDesktopSlider);
+overlay.addEventListener("click", toggleDesktopSlider);
+mainThumbnail.addEventListener("click", toggleDesktopSlider);

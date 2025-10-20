@@ -51,13 +51,13 @@
         <a
           href=""
           class="text-Grayishblue font-semibold hover:text-Verydarkblue"
-          >Collections</a
-        >
+          >Collections
+        </a>
         <a
           href=""
           class="text-Grayishblue font-semibold hover:text-Verydarkblue"
-          >Men</a
-        >
+          >Men
+        </a>
         <a
           href=""
           class="text-Grayishblue font-semibold hover:text-Verydarkblue"
@@ -185,31 +185,32 @@
             <img src="images/icon-next.svg" alt="" />
           </button>
         </div>
+
         <img
           src="images/image-product-1.jpg"
           alt="image-product-1"
           class="hidden md:block rounded-lg h-[23rem] w-fit"
         />
-        <div class="hidden md:flex gap-2 mt-[2rem]">
+        <div class="hidden md:flex gap-3 mt-[2rem]">
           <img
             src="images/image-product-1-thumbnail.jpg"
             alt="image-product-1-thumbnail"
-            class="rounded-[1rem] h-[6rem] overlay-thumbnail md:hover:opacity-[0.5]"
+            class="rounded-[1rem] h-[5rem] overlay-thumbnail md:hover:opacity-[0.5] main-thumbnail"
           />
           <img
             src="images/image-product-2-thumbnail.jpg"
             alt="image-product-2-thumbnail"
-            class="rounded-[1rem] h-[6rem] md:hover:opacity-[0.5]"
+            class="rounded-[1rem] h-[5rem] md:hover:opacity-[0.5]"
           />
           <img
             src="images/image-product-3-thumbnail.jpg"
             alt="image-product-3-thumbnail"
-            class="rounded-[1rem] h-[6rem] md:hover:opacity-[0.5]"
+            class="rounded-[1rem] h-[5rem] md:hover:opacity-[0.5]"
           />
           <img
             src="images/image-product-4-thumbnail.jpg"
             alt="image-product-4-thumbnail"
-            class="rounded-[1rem] h-[6rem] md:hover:opacity-[0.5]"
+            class="rounded-[1rem] h-[5rem] md:hover:opacity-[0.5]"
           />
         </div>
       </div>
@@ -274,5 +275,76 @@
         </div>
       </div>
     </main>
+
+    <div class="overlay overflow-hidden cursor-pointer hidden"></div>
+    <aside
+      class="absolute top-[3rem] lg:left-[40%] md:left-[30%] desktop-slider hidden"
+    >
+      <div class="flex flex-col">
+        <button
+          class="relative left-[24rem] my-[1rem] close-btn-desktop border-none bg-transparent w-fit"
+        >
+          <img
+            src="images/icon-close.svg"
+            alt="icon-close"
+            class="h-[1.5rem] w-[1.5rem]"
+          />
+        </button>
+        <div class="slider relative">
+          <div class="slides flex">
+            <img
+              src="images/image-product-1.jpg"
+              alt="image-product-1"
+              class="slide-desktop active w-[25rem] h-[25rem] rounded-[1rem]"
+            />
+            <img
+              src="images/image-product-2.jpg"
+              alt="image-product-2"
+              class="slide-desktop w-[25rem] h-[25rem] rounded-[1rem]"
+            />
+            <img
+              src="images/image-product-3.jpg"
+              alt="image-product-3"
+              class="slide-desktop w-[25rem] h-[25rem] rounded-[1rem]"
+            />
+            <img
+              src="images/image-product-4.jpg"
+              alt="image-product-4"
+              class="slide-desktop w-[25rem] h-[25rem] rounded-[1rem]"
+            />
+          </div>
+
+          <!-- Prev and Next Btns -->
+          <button class="slider-btn left-[-1rem] prev-btn-desktop">
+            <img src="images/icon-previous.svg" alt="" />
+          </button>
+          <button class="slider-btn right-[-0.2rem] next-btn-desktop">
+            <img src="images/icon-next.svg" alt="" />
+          </button>
+        </div>
+        <div class="flex gap-2 mt-[2rem] mx-[2rem]">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="image-product-1-thumbnail"
+            class="rounded-[1rem] h-[5rem] md:hover:opacity-[0.5] overlay-thumbnail thumbnail"
+          />
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="image-product-2-thumbnail"
+            class="rounded-[1rem] h-[5rem] md:hover:opacity-[0.5] thumbnail"
+          />
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="image-product-3-thumbnail"
+            class="rounded-[1rem] h-[5rem] md:hover:opacity-[0.5] thumbnail"
+          />
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="image-product-4-thumbnail"
+            class="rounded-[1rem] h-[5rem] md:hover:opacity-[0.5] thumbnail"
+          />
+        </div>
+      </div>
+    </aside>
   </body>
 </html>
